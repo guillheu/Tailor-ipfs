@@ -1,0 +1,10 @@
+[package]
+name = "Tailor-ipfs"
+version = "0.1.0"
+edition = "2021"
+author = "Guillaume Heu"
+
+[dependencies]
+tokio = { version = "1.19.0", features = ["full"] }
+ipfs-api-backend-hyper = { git = "https://github.com/guillheu/rust-ipfs-api" } 
+clap = { version = "3.2.8", features = ["derive"] }

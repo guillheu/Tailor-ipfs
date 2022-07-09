@@ -1,0 +1,17 @@
+services:
+  ipfs:
+    image: lscr.io/linuxserver/ipfs
+    container_name: ipfs
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /home/dante/testing-ipfs-rust/node-data:/config
+    ports:
+      - 80:80
+      - 4001:4001
+      - 5001:5001
+      - 8080:8080
+      - 443:443 #optional
+    restart: unless-stopped
